@@ -3,7 +3,8 @@ pipeline {
 	stages {
 		stage('Checkout-git'){
 			steps{
-				git poll: true, url: https://github.com/sralex/test-jenkins-1.git
+				sh 
+				git poll: true, url: 'https://github.com/sralex/test-jenkins-1.git'
 			}
 		}
 		stage('CreateVirtualEnv'){
