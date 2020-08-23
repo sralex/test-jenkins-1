@@ -23,7 +23,7 @@ pipeline {
 		stage('Test'){
 			steps{
 				sh '''
-					bash -c "cd src && pytest && cd .."
+					bash -c "source ./env/bin/activate && cd src && pytest && cd .."
 				'''
 			}
 		}
